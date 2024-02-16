@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+
+{% block home %}
+
+<h1 class="home">test bibi</h1>
+{{test}}
+{{nul5}}
+{{weekdays}}
+
+<ul>
+    {% for day in weekdays %}
+        <li>{{day}}</li>
+    {% endfor %}
+</ul>
+
+{{weekdays.0}}
+
+{% if weekdays.0 == 'lundi' %}
+    <p>Condition</p>
+    
+{% endif %}
+
+{% endblock home %}
