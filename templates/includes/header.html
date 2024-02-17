@@ -1,8 +1,22 @@
-<footer>
-    <h1>navbar</h1>
-    <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-    </ul>
-</footer>
+{% load static %}
+
+<nav>
+    <div class="navbar-container animated zoomIn" data-wow-duration="1s" data-wow-delay="1s">
+      <div class="img-nav">
+        <div class="nav_link_reseaux"> 
+          <li><a href="https://www.linkedin.com/" target="_blank"><img src="{% static "img/logo.png" %}" alt="logo"></a></li>
+        </div>
+      </div>
+      <div class="burger-menu">
+        <!-- <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div> -->
+        <img src="img/carte-des-hamburgers.png" class="burger">
+      </div>
+      <ul class="menu-items">
+        <li><a href="/">  Home /</a></li>
+        <li><a href="/about/">  About/</a></li>
+        <li><a href="/form/">  Form /</a></li>
+      </ul>
+    </div>
+</nav>

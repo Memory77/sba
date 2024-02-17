@@ -1,24 +1,19 @@
 {% extends "base.html" %}
-
+{% load static %}
 
 {% block home %}
 
-<h1 class="home">test bibi</h1>
-{{test}}
-{{nul5}}
-{{weekdays}}
-
-<ul>
-    {% for day in weekdays %}
-        <li>{{day}}</li>
-    {% endfor %}
-</ul>
-
-{{weekdays.0}}
-
-{% if weekdays.0 == 'lundi' %}
-    <p>Condition</p>
-    
-{% endif %}
+<section id="home" class="container parallax">
+    <div class="home-cover">
+      <div class="home-content">
+        <h1 class="wow animated fadeInRight" data-wow-duration="1s" data-wow-delay="1s">Welcome to<br> SBA Website</h1>
+        <div class="content-title-underline2"></div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque mollitia et blanditiis nisi! Alias fugit officia 
+            soluta qui quisquam eligendi? Aspernatur obcaecati illo id doloribus tempore consequuntur a libero quasi.
+        </p>
+        <img src="{% static "img/end.gif" %}" alt="gif">
+      </div>
+    </div>
+  </section>
 
 {% endblock home %}
