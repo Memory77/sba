@@ -67,7 +67,7 @@ nav {
   position: fixed;
   width: 100%;
   background-color: rgb(226, 223, 179);
-  background-image: url("../img/city2.gif");
+  background-image: url("../img/citylarge.gif");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -186,7 +186,7 @@ li {
   padding-bottom: 15px;
   width: 50%;
   text-align: justify;
-  padding: 70px;
+  padding: 50px;
 }
 #footertop .footercover .footer-content img {
   width: 30%;
