@@ -1,11 +1,26 @@
 {% extends "base.html" %}
-{% load static %}
+{% load static widget_tweaks %}
 
-{% block form %}
+{% block content %}
 
-<section id="form">
-    <h1>Form page</h1>
-</section>
+<div class="formulaire">
+    <h1>Formulaire</h1>
+    <form action="." method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit">
+    </form>
+</div>
 
-{% endblock form %}
+
+{% if data %}
+    <p>Categorie : {{data}}</p>
+{% elif error %}
+    <p>Invalide</p>
+{% endif %}
+
+
+
+
+{% endblock content %}
 
