@@ -17,6 +17,16 @@
         <li><a href="/">  Home /</a></li>
         <li><a href="/about/">  About/</a></li>
         <li><a href="/form/">  Form /</a></li>
+        <li><a href="/login/"> Login </a></li>
+        {% if user.is_authenticated %}
+          <li><a href="{% url "logout" %}">logout</a></li>
+        {% else %}
+          <li>
+              <button style="background-color: #7F3BFF; border: none; cursor: pointer; outline: none; padding: 0.5rem 1rem;">
+                  <a href="{% url "login" %}" style="color: #FFF; text-decoration: none;">login</a>
+              </button>
+        </li>
+    {% endif %}
       </ul>
     </div>
 </nav>
