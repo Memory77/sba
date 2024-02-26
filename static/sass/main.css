@@ -282,6 +282,11 @@ li {
   box-shadow: 10px 10px 5px rgb(72, 189, 221);
 }
 
+@media (max-width: 1410px) {
+  #home .home-cover {
+    width: 95%;
+  }
+}
 #about {
   color: rgb(138, 112, 182);
   height: 100vh;
