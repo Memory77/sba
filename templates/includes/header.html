@@ -17,7 +17,6 @@
         <li><a href="/">  Home /</a></li>
         <li><a href="/about/">  About/</a></li>
         <li><a href="/form/">  Form /</a></li>
-        <li><a href="/login/"> Login </a></li>
         {% if user.is_authenticated %}
           <li><a href="{% url "logout" %}">logout</a></li>
         {% else %}
