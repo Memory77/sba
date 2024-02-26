@@ -8,31 +8,8 @@ from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
 import os
 import json
 
-def home_page(request):
-    weekdays = [
-        'lundi',
-        'mardi',
-        'mercredi',
-        'jeudi',
-        'vendredi',
-        'samedi',
-        'dimanche',
-    ]
 
-    context = {
-        "test" : multiplicate_by_5(5),
-        "weekdays":weekdays
-    }
-    
-    return render(request, 'main/home_page.html', context = context)
-
-
-def about_page(request):
-    return render(request, "main/about_page.html")
-
-
-
-#@login_required
+@login_required
 def form_page(request):
         url = 'http://127.0.0.1:8000/predict'
 
