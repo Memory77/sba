@@ -6,9 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SBA Website</title>
-    {% if template_name == "form_page.html" or template_name == "registration/login.html" %}
+    {% if load_tailwind %}
         <script src="https://cdn.tailwindcss.com"></script>
-        <!--<link href="{% static 'chemin/vers/tailwind.css' %}" rel="stylesheet"> -->
     {% endif %}
     <link rel="stylesheet" href="{% static "sass/main.css" %}">
 </head>
