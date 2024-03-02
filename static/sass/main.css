@@ -39,14 +39,14 @@ html, body {
 .content-title-underline {
   width: 50px;
   height: 4px;
-  background-color: rgb(192, 45, 184);
+  background-color: rgb(72, 189, 221);
   margin: 0 auto 30px auto;
 }
 
 .content-title-underline2 {
   width: 50px;
   height: 4px;
-  background-color: rgb(192, 45, 184);
+  background-color: rgb(72, 189, 221);
   margin-bottom: 30px;
 }
 
@@ -73,7 +73,6 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
   color: #000000;
-  padding: 40px;
   position: fixed;
   z-index: 50;
 }
@@ -118,7 +117,6 @@ a img {
   list-style: none;
   padding: 1%;
   padding-right: 4%;
-  background-color: black;
 }
 
 .menu-items li {
@@ -129,12 +127,10 @@ a img {
   text-decoration: none;
   color: rgb(236, 236, 236);
   font-weight: bold;
-  font-family: "Pixelify";
-  text-transform: uppercase;
   font-size: 20px;
 }
 .menu-items li a:hover {
-  color: rgb(145, 7, 169);
+  color: rgb(72, 189, 221);
 }
 
 li {
@@ -158,7 +154,7 @@ li {
   .menu-items.active {
     display: flex;
     flex-direction: column;
-    background-color: rgb(73, 29, 85);
+    background-color: rgba(0, 0, 0, 0.7921568627);
     position: absolute;
     top: 100%;
     left: 0;
@@ -171,25 +167,34 @@ li {
   }
 }
 #footertop {
-  background-image: url("../../img/92009587580167.5dbc4c0433be8.gif");
-  height: 80vh;
+  height: 40vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: rgba(0, 0, 0, 0.613);
 }
 #footertop .footercover {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+#footertop .footercover a {
+  color: white;
 }
 #footertop .footercover .footer-content {
   padding-bottom: 15px;
-  width: 50%;
   text-align: justify;
   padding: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#footertop .footercover .footer-content .info {
+  text-align: center;
 }
 #footertop .footercover .footer-content img {
-  width: 30%;
+  width: 40%;
 }
 #footertop .footercover .footer-content h1, #footertop .footercover .footer-content h2 {
   color: white;
@@ -236,10 +241,13 @@ li {
 }
 #copyright p a:hover,
 #copyright ul a:hover {
-  color: rgb(170, 13, 149);
+  color: rgb(72, 189, 221);
 }
 
 @media (max-width: 900px) {
+  .info {
+    padding-top: 150px;
+  }
   #footertop {
     height: 100vh;
   }
@@ -253,9 +261,17 @@ li {
     padding: 8px;
   }
 }
+@media (max-width: 600px) {
+  #footertop {
+    height: 80vh;
+  }
+  .info {
+    padding-top: 150px;
+  }
+}
 #home {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   padding-top: 10%;
   background-image: url("../img/citylarge.gif");
 }
@@ -285,6 +301,12 @@ li {
 @media (max-width: 1410px) {
   #home .home-cover {
     width: 95%;
+  }
+}
+@media (max-width: 600px) {
+  #home .home-cover .home-content img {
+    width: 100%;
+    margin-left: 0%;
   }
 }
 #about {
