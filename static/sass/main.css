@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "futiger";
   src: url("../../fonts/Frutiger.ttf");
@@ -314,12 +315,82 @@ li {
   height: 100vh;
 }
 
-.formulaire {
-  height: 60vh;
-  padding-top: 400px;
-  width: 100%;
+#formulaire_page {
+  background-color: #24cabf;
+  padding: 10% 5%;
+}
+#formulaire_page #formulaire_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#formulaire_page #formulaire_content #formulaire_info {
+  width: 50%;
+}
+#formulaire_page #formulaire {
+  background-color: rgba(85, 85, 85, 0.5568627451);
+  padding: 50px 50px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  justify-content: center;
+  margin: auto;
+  margin-top: 2%;
+  width: 450px;
+}
+#formulaire_page #formulaire h1 {
+  font-size: 40px;
+}
+#formulaire_page #formulaire h1, #formulaire_page #formulaire input[type=submit] {
+  font-weight: bold; /* mettre en gras */
+  background: linear-gradient(to bottom, #5ff3e9, #073244); /* dégradé de couleur du rouge au bleu de haut en bas */
+  -webkit-background-clip: text; /* appliquer le dégradé à la couleur du texte */
+  -webkit-text-fill-color: transparent; /* rendre la couleur du texte transparente pour afficher le dégradé */
+}
+#formulaire_page #formulaire h1:hover, #formulaire_page #formulaire input[type=submit]:hover {
+  background: linear-gradient(to bottom, #4a62c9, #0b0335);
+  -webkit-background-clip: text; /* appliquer le dégradé à la couleur du texte */
+  -webkit-text-fill-color: transparent; /* rendre la couleur du texte transparente pour afficher le dégradé */
+}
+#formulaire_page #formulaire h2, #formulaire_page #formulaire p {
+  color: white;
+}
+#formulaire_page #formulaire input, #formulaire_page #formulaire textarea, #formulaire_page #formulaire select {
+  background-color: #f7f7f7;
+  border: none;
+  box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  font-size: 16px;
+  color: #555;
+}
+#formulaire_page #formulaire label {
+  color: #fff;
+}
+#formulaire_page #formulaire input, #formulaire_page #formulaire textarea, #formulaire_page #formulaire select {
+  outline: none;
+  box-shadow: inset 0px 5px 3px rgba(0, 0, 0, 0.2);
+}
+#formulaire_page #formulaire .short_input {
+  width: 70%;
+}
+#formulaire_page #formulaire input[type=submit] {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  box-shadow: none;
+  font-size: 30px;
 }
 
+@media (max-width: 1410px) {
+  #formulaire_page {
+    padding: 25% 5%;
+  }
+  #formulaire_page #formulaire_info {
+    width: 90%;
+  }
+}
 /*!
  * animate.css -http://daneden.me/animate
  * Version - 3.7.0
