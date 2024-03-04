@@ -1,41 +1,67 @@
-#about {
+#about_page{
+    width: 100%;
+    height: 100vh;
+    padding-top: 200px;
+    background-color: lightgray;
+}
+
+.heading {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.heading h1 {
+    font-size: 50px;
+    color: #000;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.heading h1::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: purple;
+}
+
+.heading p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 35px;
+}
+
+.about-image {
+    flex: 1;
+    margin-right: 40px;
+    overflow: hidden;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.2);
+}
+
+.about {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 
-    .heading {
-        width: 90%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-        margin: 20px auto;
-    }
 
-    .heading h1 {
-        font-size: 50px;
-        color: #000;
-        margin-bottom: 25px;
-        position: relative;
-    }
-
-    .heading h1::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 4px;
-        display: block;
-        margin: 0 auto;
-        background-color: purple;
-    }
-
-    .heading p {
-        font-size: 18px;
-        color: #666;
-        margin-bottom: 35px;
-    }
 
     .container {
         width: 90%;
@@ -50,22 +76,7 @@
         flex-wrap: wrap;
     }
 
-    .about-image {
-        flex: 1;
-        margin-right: 40px;
-        overflow: hidden;
-    }
 
-    .about-image img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        transition: 0.5s ease;
-    }
-
-    .about-image:hover img {
-        transform: scale(1.2);
-    }
 
     .about-content {
         flex: 1;
@@ -75,12 +86,15 @@
         font-size: 23px;
         margin-bottom: 15px;
         color: #333;
+        text-align: center;
     }
 
     .about-content p {
         font-size: 18px;
         line-height: 1.5;
         color: #666;
+        margin: 30px;
+        text-align: center;
     }
 
     .about-content .read-more {
