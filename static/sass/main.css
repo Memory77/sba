@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "futiger";
   src: url("../../fonts/Frutiger.ttf");
@@ -39,14 +40,14 @@ html, body {
 .content-title-underline {
   width: 50px;
   height: 4px;
-  background-color: rgb(192, 45, 184);
+  background-color: rgb(72, 189, 221);
   margin: 0 auto 30px auto;
 }
 
 .content-title-underline2 {
   width: 50px;
   height: 4px;
-  background-color: rgb(192, 45, 184);
+  background-color: rgb(72, 189, 221);
   margin-bottom: 30px;
 }
 
@@ -73,7 +74,6 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
   color: #000000;
-  padding: 40px;
   position: fixed;
   z-index: 50;
 }
@@ -118,7 +118,6 @@ a img {
   list-style: none;
   padding: 1%;
   padding-right: 4%;
-  background-color: black;
 }
 
 .menu-items li {
@@ -129,12 +128,10 @@ a img {
   text-decoration: none;
   color: rgb(236, 236, 236);
   font-weight: bold;
-  font-family: "Pixelify";
-  text-transform: uppercase;
   font-size: 20px;
 }
 .menu-items li a:hover {
-  color: rgb(145, 7, 169);
+  color: rgb(72, 189, 221);
 }
 
 li {
@@ -158,7 +155,7 @@ li {
   .menu-items.active {
     display: flex;
     flex-direction: column;
-    background-color: rgb(73, 29, 85);
+    background-color: rgba(0, 0, 0, 0.7921568627);
     position: absolute;
     top: 100%;
     left: 0;
@@ -171,25 +168,34 @@ li {
   }
 }
 #footertop {
-  background-image: url("../../img/92009587580167.5dbc4c0433be8.gif");
-  height: 80vh;
+  height: 40vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: rgba(0, 0, 0, 0.613);
 }
 #footertop .footercover {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+#footertop .footercover a {
+  color: white;
 }
 #footertop .footercover .footer-content {
   padding-bottom: 15px;
-  width: 50%;
   text-align: justify;
   padding: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#footertop .footercover .footer-content .info {
+  text-align: center;
 }
 #footertop .footercover .footer-content img {
-  width: 30%;
+  width: 40%;
 }
 #footertop .footercover .footer-content h1, #footertop .footercover .footer-content h2 {
   color: white;
@@ -236,10 +242,13 @@ li {
 }
 #copyright p a:hover,
 #copyright ul a:hover {
-  color: rgb(170, 13, 149);
+  color: rgb(72, 189, 221);
 }
 
 @media (max-width: 900px) {
+  .info {
+    padding-top: 150px;
+  }
   #footertop {
     height: 100vh;
   }
@@ -253,9 +262,17 @@ li {
     padding: 8px;
   }
 }
+@media (max-width: 600px) {
+  #footertop {
+    height: 80vh;
+  }
+  .info {
+    padding-top: 150px;
+  }
+}
 #home {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   padding-top: 10%;
   background-image: url("../img/citylarge.gif");
 }
@@ -287,6 +304,12 @@ li {
     width: 95%;
   }
 }
+@media (max-width: 600px) {
+  #home .home-cover .home-content img {
+    width: 100%;
+    margin-left: 0%;
+  }
+}
 #about {
   display: flex;
   align-items: center;
@@ -310,12 +333,82 @@ li {
   padding: 400px;
 }
 
-.formulaire {
-  height: 60vh;
-  padding-top: 400px;
-  width: 100%;
+#formulaire_page {
+  background-color: #24cabf;
+  padding: 10% 5%;
+}
+#formulaire_page #formulaire_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#formulaire_page #formulaire_content #formulaire_info {
+  width: 50%;
+}
+#formulaire_page #formulaire {
+  background-color: rgba(85, 85, 85, 0.5568627451);
+  padding: 50px 50px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  justify-content: center;
+  margin: auto;
+  margin-top: 2%;
+  width: 450px;
+}
+#formulaire_page #formulaire h1 {
+  font-size: 40px;
+}
+#formulaire_page #formulaire h1, #formulaire_page #formulaire input[type=submit] {
+  font-weight: bold; /* mettre en gras */
+  background: linear-gradient(to bottom, #5ff3e9, #073244); /* dégradé de couleur du rouge au bleu de haut en bas */
+  -webkit-background-clip: text; /* appliquer le dégradé à la couleur du texte */
+  -webkit-text-fill-color: transparent; /* rendre la couleur du texte transparente pour afficher le dégradé */
+}
+#formulaire_page #formulaire h1:hover, #formulaire_page #formulaire input[type=submit]:hover {
+  background: linear-gradient(to bottom, #4a62c9, #0b0335);
+  -webkit-background-clip: text; /* appliquer le dégradé à la couleur du texte */
+  -webkit-text-fill-color: transparent; /* rendre la couleur du texte transparente pour afficher le dégradé */
+}
+#formulaire_page #formulaire h2, #formulaire_page #formulaire p {
+  color: white;
+}
+#formulaire_page #formulaire input, #formulaire_page #formulaire textarea, #formulaire_page #formulaire select {
+  background-color: #f7f7f7;
+  border: none;
+  box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  font-size: 16px;
+  color: #555;
+}
+#formulaire_page #formulaire label {
+  color: #fff;
+}
+#formulaire_page #formulaire input, #formulaire_page #formulaire textarea, #formulaire_page #formulaire select {
+  outline: none;
+  box-shadow: inset 0px 5px 3px rgba(0, 0, 0, 0.2);
+}
+#formulaire_page #formulaire .short_input {
+  width: 70%;
+}
+#formulaire_page #formulaire input[type=submit] {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  box-shadow: none;
+  font-size: 30px;
 }
 
+@media (max-width: 1410px) {
+  #formulaire_page {
+    padding: 25% 5%;
+  }
+  #formulaire_page #formulaire_info {
+    width: 90%;
+  }
+}
 /*!
  * animate.css -http://daneden.me/animate
  * Version - 3.7.0

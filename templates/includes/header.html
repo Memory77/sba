@@ -11,18 +11,18 @@
         <!-- <div class="line"></div>
         <div class="line"></div>
         <div class="line"></div> -->
-        <img src="img/carte-des-hamburgers.png" class="burger">
+        <img src="{% static "img/carte-des-hamburgers.png" %}" alt="logo" class="burger">
       </div>
       <ul class="menu-items">
-        <li><a href="/">  Home /</a></li>
-        <li><a href="/about/">  About/</a></li>
-        <li><a href="/form/">  Form /</a></li>
+        <li><a href="/">  Home </a></li>
+        <li><a href="/about/">  About </a></li>
+        <li><a href="/form/">  Form </a></li>
         {% if user.is_authenticated %}
           <li><a href="{% url "logout" %}">logout</a></li>
         {% else %}
           <li>
-          <button style="background-color: #7F3BFF; border: none; cursor: pointer; outline: none">
-          <a href="{% url "login" %}" style="color: #FFF; text-decoration: none;">login</a>
+              <button style="background-color: rgb(72, 189, 221); border: none; cursor: pointer; outline: none; padding: 0.5rem 1rem;">
+                  <a href="{% url "login" %}" style="color: #FFF; text-decoration: none;">login</a>
               </button>
         </li>
     {% endif %}
