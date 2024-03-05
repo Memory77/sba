@@ -3,16 +3,16 @@
 
 {% block content %}
 
-<div id="formulaire_page">
+<div id="formulaire_page" class="parallax">
     <div id="formulaire_content">
         <div id="formulaire_info">
             <h1>Title</h1>
             <div class="content-title-underline2"></div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab officiis repudiandae nesciunt illum labore repellat voluptatem soluta amet modi aliquam eos, vero, quidem, perspiciatis cum dicta? Maiores modi fuga aliquid!</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod nulla necessitatibus nam! Perspiciatis obcaecati tempore dolore totam aperiam quis est. Sapiente, odio! Non voluptatibus libero minus in soluta exercitationem autem?</p>
         </div>
         <img src="{% static "img/size.jpg" %}" alt="gif">
     </div>
-    <h1>Formulaire</h1>
     <form action="." method="post" id="formulaire">
         {% csrf_token %}
         {{ form }}
