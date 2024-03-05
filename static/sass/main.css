@@ -312,7 +312,7 @@ li {
 }
 #about_page {
   width: 100%;
-  height: 100vh;
+  height: 150vh;
   padding-top: 200px;
   background-color: lightgray;
 }
@@ -352,15 +352,17 @@ li {
 
 .about-image {
   flex: 1;
-  margin-right: 40px;
+  margin-right: 0; /* Modifier le décalage vers la droite pour résoudre le problème */
   overflow: hidden;
+  text-align: center; /* Ajouter cette propriété pour centrer l'image */
 }
 
 .about-image img {
-  max-width: 100%;
+  max-width: 100%; /* Modifier la largeur maximale pour remplir la largeur du conteneur */
   height: auto;
-  display: block;
+  display: inline-block; /* Changer l'affichage en ligne pour centrer correctement l'image */
   transition: 0.5s ease;
+  margin: auto; /* Centrer l'image horizontalement */
 }
 
 .about-image:hover img {
@@ -398,7 +400,8 @@ li {
   line-height: 1.5;
   color: #666;
   margin: 30px;
-  text-align: center;
+  padding: 0 20%;
+  text-align: justify;
 }
 .about .about-content .read-more {
   display: inline-block;
@@ -410,20 +413,20 @@ li {
   border-radius: 25px;
   margin-top: 15px;
   transition: 0.3s ease;
+  margin: auto;
 }
 .about .about-content .read-more:hover {
   background-color: purple;
 }
 @media screen and (max-width: 768px) {
+  .about #about_page {
+    height: 100vh;
+  }
   .about .heading {
-    padding: 0px 20px;
+    padding: 0px 10px;
   }
   .about .heading h1 {
-    font-size: 36px;
-  }
-  .about .heading p {
-    font-size: 17px;
-    margin-bottom: 0px;
+    font-size: 15px;
   }
   .about .container {
     padding: 0px;
@@ -432,16 +435,20 @@ li {
     padding: 20px;
     flex-direction: column;
   }
-  .about .about-image {
-    margin-right: 0px;
-    margin-bottom: 20px;
+  .about .about-image img {
+    max-width: 70%;
+    margin: auto;
+  }
+  .about .about-content h2 {
+    padding: 0 10%;
+    font-size: 18px;
   }
   .about .about-content p {
     padding: 0px;
-    font-size: 16px;
+    font-size: 13px;
   }
   .about .about-content .read-more {
-    font-size: 16px;
+    font-size: 12px;
   }
 }
 
