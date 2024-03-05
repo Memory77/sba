@@ -75,6 +75,14 @@
         color: rgb(72, 189, 221);
     }
   }
+
+    .button li a {
+      color: rgb(72, 189, 221);
+    }
+
+    .button:hover li a {
+      color: goldenrod;
+  }
   
     li{
       list-style: none;

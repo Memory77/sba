@@ -134,6 +134,14 @@ a img {
   color: rgb(72, 189, 221);
 }
 
+.button li a {
+  color: rgb(72, 189, 221);
+}
+
+.button:hover li a {
+  color: goldenrod;
+}
+
 li {
   list-style: none;
 }
@@ -341,7 +349,7 @@ li {
   height: 4px;
   display: block;
   margin: 0 auto;
-  background-color: purple;
+  background-color: rgb(72, 189, 221);
 }
 
 .heading p {
@@ -416,7 +424,7 @@ li {
   margin: auto;
 }
 .about .about-content .read-more:hover {
-  background-color: purple;
+  background-color: rgb(72, 189, 221);
 }
 @media screen and (max-width: 768px) {
   .about #about_page {

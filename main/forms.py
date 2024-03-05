@@ -8,21 +8,21 @@ class PredApiForm(forms.ModelForm):
         fields = ['State', 'Zip','BankState', 'RevLineCr', 'LowDoc', 'NewExist', 'UrbanRural', 'FranchiseCode', 'NAICS', 'Term'
                   ,'NoEmp','CreateJob','RetainedJob','GrAppv','SBA_Appv']
         labels = {
-            "State": "Selectionnez l'Etat",
-            "Zip": "Renseignez le code zip de votre état",
-            "BankState": "l'Etat de la banque",
-            "RevLineCr": "Revlinecr",
-            "LowDoc": "Lowdoc",
-            "NewExist": "Nouveauté",
-            "UrbanRural": "Urban/Rural",
-            "FranchiseCode": "Entrez votre code de franchise",
-            "NAICS": "Entrez vos numéros NAICS",
-            "Term": "Term",
-            'NoEmp': "Nombre d'employés",
-            'CreateJob': "Nombre d'emplois créés",
-            'RetainedJob': "Nombre d'emplois retenus",
-            'GrAppv': 'Montant approuvé',
-            'SBA_Appv':'Montant approuvé par la SBA'
+                "State": "Select your state",
+                "Zip": "Enter your state's ZIP code",
+                "BankState": "Bank state",
+                "RevLineCr": "Revolving line of credit",
+                "LowDoc": "Low-doc",
+                "NewExist": "New or existing",
+                "UrbanRural": "Urban or rural",
+                "FranchiseCode": "Enter franchise code",
+                "NAICS": "Enter NAICS numbers",
+                "Term": "Term",
+                "NoEmp": "Number of employees",
+                "CreateJob": "Number of jobs created",
+                "RetainedJob": "Number of jobs retained",
+                "GrAppv": "Approved loan amount",
+                "SBA_Appv": "SBA-approved loan amount"
         }
         
     def save(self, commit=True):

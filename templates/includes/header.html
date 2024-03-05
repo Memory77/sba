@@ -17,15 +17,17 @@
         <li><a href="/">  Home </a></li>
         <li><a href="/about/">  About </a></li>
         <li><a href="/form/">  Form </a></li>
+        <div class="button">
         {% if user.is_authenticated %}
-          <li><button style="background-color: rgb(72, 189, 221); border: none; cursor: pointer; outline: none; padding: 0.5rem 1rem;"><a href="{% url "logout" %}">logout</a></li>
+          <li>
+              <a href="{% url "logout" %}" style="color: #FFF; text-decoration: none;">Logout</a>
+      </li>
         {% else %}
           <li>
-              <button style="background-color: rgb(72, 189, 221); border: none; cursor: pointer; outline: none; padding: 0.5rem 1rem;">
-                  <a href="{% url "login" %}" style="color: #FFF; text-decoration: none;">login</a>
-              </button>
+              <a href="{% url "login" %}" style="color: #FFF; text-decoration: none;">Login</a>
         </li>
     {% endif %}
+  </div>
       </ul>
     </div>
 </nav>

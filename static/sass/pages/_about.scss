@@ -29,7 +29,7 @@
     height: 4px;
     display: block;
     margin: 0 auto;
-    background-color: purple;
+    background-color: rgb(72, 189, 221);;
 }
 
 .heading p {
@@ -111,7 +111,7 @@
     }
 
     .about-content .read-more:hover {
-        background-color: purple;
+        background-color:rgb(72, 189, 221);
     }
 
     @media screen and (max-width: 768px) {
@@ -158,3 +158,4 @@
         }
     }
 }
+
