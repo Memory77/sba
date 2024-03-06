@@ -21,18 +21,19 @@
         {% csrf_token %}
         {{ form }}
         <input type="submit" value="Submit">
+        <div id="predict_content">
+            {% if data %}
+                {% if data.prediction == 0 %}
+                    <p>We can grant you a loan</p>
+                {% else %}
+                    <p>We cannot grant you a loan</p>
+                {% endif %} 
+            {% elif error %}
+                <p>Invalide</p>
+            {% endif %} 
+        </div>
     </form>
 </div>
-
-
-{% if data %}
-    <p>Categorie : {{data}}</p>
-{% elif error %}
-    <p>Invalide</p>
-{% endif %}
-
-
-
 
 {% endblock content %}
 

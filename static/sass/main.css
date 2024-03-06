@@ -64,6 +64,14 @@ h1 {
   font-size: 40px;
 }
 
+.button {
+  background-color: rgb(72, 189, 221);
+  margin-left: 15px;
+}
+.button:hover {
+  background-color: #000000;
+}
+
 nav {
   position: fixed;
   width: 100%;

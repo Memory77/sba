@@ -7,6 +7,17 @@ class PredApiForm(forms.ModelForm):
         model = PredApi
         fields = ['State', 'Zip','BankState', 'RevLineCr', 'LowDoc', 'NewExist', 'UrbanRural', 'FranchiseCode', 'NAICS', 'Term'
                   ,'NoEmp','CreateJob','RetainedJob','GrAppv','SBA_Appv']
+        widgets = {
+            'Zip': forms.TextInput(attrs={'placeholder': '47711'}),
+            'FranchiseCode': forms.TextInput(attrs={'placeholder': '15100'}),
+            'NAICS': forms.TextInput(attrs={'placeholder': '451120'}),
+            'Term': forms.TextInput(attrs={'placeholder': '84'}),
+            'NoEmp': forms.TextInput(attrs={'placeholder': '10'}),
+            'CreateJob': forms.TextInput(attrs={'placeholder': '5'}),
+            'RetainedJob': forms.TextInput(attrs={'placeholder': '5'}),
+            'GrAppv': forms.TextInput(attrs={'placeholder': '60000'}),
+            'SBA_Appv': forms.TextInput(attrs={'placeholder': '48000'}),
+        }
         labels = {
                 "State": "Select your state",
                 "Zip": "Enter your state's ZIP code",

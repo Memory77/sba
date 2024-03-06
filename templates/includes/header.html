@@ -21,13 +21,13 @@
         {% if user.is_authenticated %}
           <li>
               <a href="{% url "logout" %}" style="color: #FFF; text-decoration: none;">Logout</a>
-      </li>
+          </li>
         {% else %}
           <li>
               <a href="{% url "login" %}" style="color: #FFF; text-decoration: none;">Login</a>
-        </li>
-    {% endif %}
-  </div>
+          </li>
+      {% endif %}
+      </div>
       </ul>
     </div>
 </nav>

@@ -1,3 +1,12 @@
+  .button{
+    background-color: rgb(72, 189, 221);
+    margin-left: 15px;
+      &:hover{
+        background-color: #000000;
+      }
+  }
+
+  
 
   nav {
       position: fixed;
@@ -56,11 +65,13 @@
       padding: 1%;
       padding-right: 4%;
       //background-color: black;
-  
+
+      
     }
     
     .menu-items li {
       margin-left: 20px;
+      
       
     }
     
