@@ -1,6 +1,6 @@
 #about_page{
     width: 100%;
-    height: 150vh;
+    height: 200vh;
     padding-top: 200px;
     background-color: lightgray;
 }
@@ -42,7 +42,8 @@
     flex: 1;
     margin-right: 0; /* Modifier le décalage vers la droite pour résoudre le problème */
     overflow: hidden;
-    text-align: center; /* Ajouter cette propriété pour centrer l'image */
+    width: 400px;
+    margin:auto; /* Ajouter cette propriété pour centrer l'image */
 }
 
 .about-image img {
@@ -97,10 +98,14 @@
         text-align: justify;
     }
 
+    .about-content p img {
+        padding: 5% 0;
+    }
+
     .about-content .read-more {
         display: inline-block;
         padding: 10px 20px;
-        background-color: #4caf50;
+        background-color: #4a3392;
         color: #fff;
         font-size: 19px;
         text-decoration: none;
