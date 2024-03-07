@@ -38,7 +38,7 @@ def form_page(request):
         else:
             form = PredApiForm()
 
-        return render(request, "main/form_page.html", context = {"form": form, 'load_tailwind': True})
+        return render(request, "main/form_page.html", context = {"form": form})
 
 # Create your views here.
 def home_page(request):
