@@ -11,12 +11,23 @@
         <!-- <div class="line"></div>
         <div class="line"></div>
         <div class="line"></div> -->
-        <img src="img/carte-des-hamburgers.png" class="burger">
+        <img src="{% static "img/carte-des-hamburgers.png" %}" alt="logo" class="burger">
       </div>
       <ul class="menu-items">
-        <li><a href="/">  Home /</a></li>
-        <li><a href="/about/">  About/</a></li>
-        <li><a href="/form/">  Form /</a></li>
+        <li><a href="/">  Home </a></li>
+        <li><a href="/about/">  About </a></li>
+        <li><a href="/form/">  Form </a></li>
+        <div class="button">
+        {% if user.is_authenticated %}
+          <li>
+              <a href="{% url "logout" %}" style="color: #FFF; text-decoration: none;">Logout</a>
+          </li>
+        {% else %}
+          <li>
+              <a href="{% url "login" %}" style="color: #FFF; text-decoration: none;">Login</a>
+          </li>
+      {% endif %}
+      </div>
       </ul>
     </div>
 </nav>

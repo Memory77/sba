@@ -8,31 +8,8 @@ from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
 import os
 import json
 
-def home_page(request):
-    weekdays = [
-        'lundi',
-        'mardi',
-        'mercredi',
-        'jeudi',
-        'vendredi',
-        'samedi',
-        'dimanche',
-    ]
 
-    context = {
-        "test" : multiplicate_by_5(5),
-        "weekdays":weekdays
-    }
-    
-    return render(request, 'main/home_page.html', context = context)
-
-
-def about_page(request):
-    return render(request, "main/about_page.html")
-
-
-
-#@login_required
+@login_required
 def form_page(request):
         url = 'http://127.0.0.1:8000/predict'
 
@@ -62,3 +39,19 @@ def form_page(request):
             form = PredApiForm()
 
         return render(request, "main/form_page.html", context = {"form": form})
+
+# Create your views here.
+def home_page(request):
+    return render(request, 'main/home_page.html')
+
+def about_page(request):
+    return render(request, 'main/about_page.html')
+
+# def contact_page(request, test):
+#     context = {'test': test}
+#     return render(request, 'main/contact_page.html', context=context)
+
+@login_required
+def special_page(request):
+    return render(request, "main/special_page.html")
+

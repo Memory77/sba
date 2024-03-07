@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "futiger";
   src: url("../../fonts/Frutiger.ttf");
@@ -39,14 +40,14 @@ html, body {
 .content-title-underline {
   width: 50px;
   height: 4px;
-  background-color: rgb(192, 45, 184);
+  background-color: rgb(72, 189, 221);
   margin: 0 auto 30px auto;
 }
 
 .content-title-underline2 {
   width: 50px;
   height: 4px;
-  background-color: rgb(192, 45, 184);
+  background-color: rgb(72, 189, 221);
   margin-bottom: 30px;
 }
 
@@ -63,6 +64,14 @@ h1 {
   font-size: 40px;
 }
 
+.button {
+  background-color: rgb(72, 189, 221);
+  margin-left: 15px;
+}
+.button:hover {
+  background-color: #000000;
+}
+
 nav {
   position: fixed;
   width: 100%;
@@ -73,7 +82,6 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
   color: #000000;
-  padding: 40px;
   position: fixed;
   z-index: 50;
 }
@@ -118,7 +126,6 @@ a img {
   list-style: none;
   padding: 1%;
   padding-right: 4%;
-  background-color: black;
 }
 
 .menu-items li {
@@ -129,12 +136,18 @@ a img {
   text-decoration: none;
   color: rgb(236, 236, 236);
   font-weight: bold;
-  font-family: "Pixelify";
-  text-transform: uppercase;
   font-size: 20px;
 }
 .menu-items li a:hover {
-  color: rgb(145, 7, 169);
+  color: rgb(72, 189, 221);
+}
+
+.button li a {
+  color: rgb(72, 189, 221);
+}
+
+.button:hover li a {
+  color: goldenrod;
 }
 
 li {
@@ -158,7 +171,7 @@ li {
   .menu-items.active {
     display: flex;
     flex-direction: column;
-    background-color: rgb(73, 29, 85);
+    background-color: rgba(0, 0, 0, 0.7921568627);
     position: absolute;
     top: 100%;
     left: 0;
@@ -171,25 +184,34 @@ li {
   }
 }
 #footertop {
-  background-image: url("../../img/92009587580167.5dbc4c0433be8.gif");
-  height: 80vh;
+  height: 40vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: rgba(0, 0, 0, 0.613);
 }
 #footertop .footercover {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+#footertop .footercover a {
+  color: white;
 }
 #footertop .footercover .footer-content {
   padding-bottom: 15px;
-  width: 50%;
   text-align: justify;
   padding: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#footertop .footercover .footer-content .info {
+  text-align: center;
 }
 #footertop .footercover .footer-content img {
-  width: 30%;
+  width: 40%;
 }
 #footertop .footercover .footer-content h1, #footertop .footercover .footer-content h2 {
   color: white;
@@ -236,10 +258,13 @@ li {
 }
 #copyright p a:hover,
 #copyright ul a:hover {
-  color: rgb(170, 13, 149);
+  color: rgb(72, 189, 221);
 }
 
 @media (max-width: 900px) {
+  .info {
+    padding-top: 150px;
+  }
   #footertop {
     height: 100vh;
   }
@@ -253,9 +278,17 @@ li {
     padding: 8px;
   }
 }
+@media (max-width: 600px) {
+  #footertop {
+    height: 80vh;
+  }
+  .info {
+    padding-top: 150px;
+  }
+}
 #home {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   padding-top: 10%;
   background-image: url("../img/citylarge.gif");
 }
@@ -282,17 +315,243 @@ li {
   box-shadow: 10px 10px 5px rgb(72, 189, 221);
 }
 
-#about {
-  color: rgb(138, 112, 182);
-  height: 100vh;
+@media (max-width: 1410px) {
+  #home .home-cover {
+    width: 95%;
+  }
 }
-
-.formulaire {
-  height: 60vh;
-  padding-top: 400px;
+@media (max-width: 600px) {
+  #home .home-cover .home-content img {
+    width: 100%;
+    margin-left: 0%;
+  }
+}
+#about_page {
   width: 100%;
+  height: 200vh;
+  padding-top: 200px;
+  background-color: lightgray;
 }
 
+.heading {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.heading h1 {
+  font-size: 50px;
+  color: #000;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.heading h1::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  display: block;
+  margin: 0 auto;
+  background-color: rgb(72, 189, 221);
+}
+
+.heading p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 35px;
+}
+
+.about-image {
+  flex: 1;
+  margin-right: 0; /* Modifier le décalage vers la droite pour résoudre le problème */
+  overflow: hidden;
+  width: 400px;
+  margin: auto; /* Ajouter cette propriété pour centrer l'image */
+}
+
+.about-image img {
+  max-width: 100%; /* Modifier la largeur maximale pour remplir la largeur du conteneur */
+  height: auto;
+  display: inline-block; /* Changer l'affichage en ligne pour centrer correctement l'image */
+  transition: 0.5s ease;
+  margin: auto; /* Centrer l'image horizontalement */
+}
+
+.about-image:hover img {
+  transform: scale(1.2);
+}
+
+.about {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+.about .container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+.about .about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.about .about-content {
+  flex: 1;
+}
+.about .about-content h2 {
+  font-size: 23px;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+}
+.about .about-content p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #666;
+  margin: 30px;
+  padding: 0 20%;
+  text-align: justify;
+}
+.about .about-content p img {
+  padding: 5% 0;
+}
+.about .about-content .read-more {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4a3392;
+  color: #fff;
+  font-size: 19px;
+  text-decoration: none;
+  border-radius: 25px;
+  margin-top: 15px;
+  transition: 0.3s ease;
+  margin: auto;
+}
+.about .about-content .read-more:hover {
+  background-color: rgb(72, 189, 221);
+}
+@media screen and (max-width: 768px) {
+  .about #about_page {
+    height: 100vh;
+  }
+  .about .heading {
+    padding: 0px 10px;
+  }
+  .about .heading h1 {
+    font-size: 15px;
+  }
+  .about .container {
+    padding: 0px;
+  }
+  .about .about {
+    padding: 20px;
+    flex-direction: column;
+  }
+  .about .about-image img {
+    max-width: 70%;
+    margin: auto;
+  }
+  .about .about-content h2 {
+    padding: 0 10%;
+    font-size: 18px;
+  }
+  .about .about-content p {
+    padding: 0px;
+    font-size: 13px;
+  }
+  .about .about-content .read-more {
+    font-size: 12px;
+  }
+}
+
+#formulaire_page {
+  background-color: #24cabf;
+  background-image: url("../img/homme-affaire.jpg");
+  padding: 10% 5%;
+}
+#formulaire_page #formulaire_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#formulaire_page #formulaire_content #formulaire_info {
+  width: 50%;
+  background-color: rgba(221, 218, 218, 0.542);
+  padding: 100px;
+}
+#formulaire_page #formulaire_content #formulaire_info p {
+  text-align: justify;
+}
+#formulaire_page #formulaire {
+  background-color: rgba(72, 121, 137, 0.5568627451);
+  padding: 50px 50px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  justify-content: center;
+  margin: auto;
+  margin-top: 2%;
+  width: 450px;
+}
+#formulaire_page #formulaire h1 {
+  font-size: 40px;
+  margin: auto;
+}
+#formulaire_page #formulaire h1, #formulaire_page #formulaire input[type=submit] {
+  font-weight: bold; /* mettre en gras */
+  background: linear-gradient(to bottom, #295855, #213e4a); /* dégradé de couleur du rouge au bleu de haut en bas */
+  -webkit-background-clip: text; /* appliquer le dégradé à la couleur du texte */
+  -webkit-text-fill-color: transparent; /* rendre la couleur du texte transparente pour afficher le dégradé */
+}
+#formulaire_page #formulaire h1:hover, #formulaire_page #formulaire input[type=submit]:hover {
+  background: linear-gradient(to bottom, #4a62c9, #0b0335);
+  -webkit-background-clip: text; /* appliquer le dégradé à la couleur du texte */
+  -webkit-text-fill-color: transparent; /* rendre la couleur du texte transparente pour afficher le dégradé */
+}
+#formulaire_page #formulaire h2, #formulaire_page #formulaire p {
+  color: white;
+}
+#formulaire_page #formulaire input, #formulaire_page #formulaire textarea, #formulaire_page #formulaire select {
+  background-color: #f7f7f7;
+  border: none;
+  box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  font-size: 16px;
+  color: #555;
+}
+#formulaire_page #formulaire label {
+  color: #fff;
+}
+#formulaire_page #formulaire input, #formulaire_page #formulaire textarea, #formulaire_page #formulaire select {
+  outline: none;
+  box-shadow: inset 0px 5px 3px rgba(0, 0, 0, 0.2);
+}
+#formulaire_page #formulaire .short_input {
+  width: 70%;
+}
+#formulaire_page #formulaire input[type=submit] {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  box-shadow: none;
+  font-size: 30px;
+}
+
+@media (max-width: 1410px) {
+  #formulaire_page {
+    padding: 25% 5%;
+  }
+}
 /*!
  * animate.css -http://daneden.me/animate
  * Version - 3.7.0
