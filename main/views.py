@@ -31,7 +31,7 @@ def form_page(request):
                     response = session.post(url, data=data_input)
                     data = response.json()
                     print(data)
-                    form.save()
+                    form.save(prediction=data.get('prediction'))
                     return render(request, "main/form_page.html", context = {"form": form, 'data': data})
                 except (ConnectionError, Timeout, TooManyRedirects, KeyError) as e:
                     return render(request, "main/form_page.html", context = {"form": form, 'error': e})
@@ -46,10 +46,6 @@ def home_page(request):
 
 def about_page(request):
     return render(request, 'main/about_page.html')
-
-# def contact_page(request, test):
-#     context = {'test': test}
-#     return render(request, 'main/contact_page.html', context=context)
 
 @login_required
 def special_page(request):

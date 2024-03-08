@@ -36,13 +36,13 @@ class PredApiForm(forms.ModelForm):
                 "SBA_Appv": "SBA-approved loan amount"
         }
         
-    def save(self, commit=True):
+    def save(self, commit=True, *args, **kwargs):
         instance = super().save(commit=False)
         
         # Ici, vous pouvez inclure la logique pour définir FranchiseBinary et Industry
         instance.FranchiseBinary = 0 if instance.FranchiseCode in [0, 1] else 1
         instance.Industry = instance.map_naics_to_industry()
-
+        instance.Prediction = kwargs.get('prediction', None)
         if commit:
             instance.save()
             self.save_m2m()
