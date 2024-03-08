@@ -1,5 +1,5 @@
 {% load static %}
-
+{% url "form" as url_form %}
 <nav>
     <div class="navbar-container animated zoomIn" data-wow-duration="1s" data-wow-delay="1s">
       <div class="img-nav">
@@ -15,11 +15,11 @@
       </div>
       <ul class="menu-items">
         {% if user.is_authenticated %}
-          <li>Logged as : {{user.get_username}}</li>
+          <li class="logg">Logged as: {{user.get_username}}</li>
         {% endif %}
-        <li><a href="/">  Home </a></li>
+        <li><a href="{% url "home" %}">  Home </a></li>
         <li><a href="{% url "about" %}">  About </a></li>
-        <li><a href="{% url "form" %}">  Form </a></li>
+        <li><a {% if request.path == url_form %} class="bg" {% endif %} href="{% url "form" %}">  Form </a></li>
         <div class="button">
         {% if user.is_authenticated %}
           <li>
