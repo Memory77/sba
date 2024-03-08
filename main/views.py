@@ -47,10 +47,6 @@ def home_page(request):
 def about_page(request):
     return render(request, 'main/about_page.html')
 
-# def contact_page(request, test):
-#     context = {'test': test}
-#     return render(request, 'main/contact_page.html', context=context)
-
 @login_required
 def special_page(request):
     return render(request, "main/special_page.html")
